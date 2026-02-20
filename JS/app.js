@@ -112,6 +112,7 @@ function lucro(){
     `;
 };
 
+
 function limpar(){
     document.getElementById('resultado').style.display = 'none';
 
