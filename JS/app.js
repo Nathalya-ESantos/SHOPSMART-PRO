@@ -11,16 +11,15 @@ function calcularTotal (){
         return;
     }
 
-    document.getElementById('resultado').style.display = 'flex';
+    resultado.style.display = 'flex';
 
     let total = (v1 * v2);
 
-    resultado.innerHTML = 
-    `
+    resultado.innerHTML = `
     <h2>Valor total</h2>
-        <p>Valor01:  ${v1} Valor02: ${v2}</p>
-   
-    <h2>Você irá pagar um valor total de ${total}</h2>
+        <p>Valor 01: R$ ${v1.toFixed(2)}</p>
+        <p>Valor 02: ${v2}</p>
+    <h2>Você irá pagar um valor total de R$ ${total.toFixed(2)}</h2>
     `;
 };
 
@@ -40,9 +39,10 @@ function desconto() {
 
     resultado.innerHTML = `
     <h2>Total do desconto</h2>
-        <p>DESCONTO</p>
-        <p>Valor 01: ${v1} Porcentagem de desconto: ${v2} Valor do desconto: ${desconto}</p>
-    <h2>Valor final com desconto: ${total}</h2>
+        <p>Valor 01: R$ ${v1.toFixed(2)}</p>
+        <p>Porcentagem de desconto: ${v2}%</p>
+        <p>Valor do desconto: R$ ${desconto.toFixed(2)}</p>
+    <h2>Valor final com desconto: R$ ${total.toFixed(2)}</h2>
     `;
 }
 
@@ -62,10 +62,13 @@ function juros(){
 
     resultado.innerHTML = `
     <h2>Total do Juros</h2>
-        <p>JUROS</p>
-        <p>Valor 01: ${v1} Valor 02: ${v2} Valor do juros ${acrescimo} Valor final: ${total}</p>
+        <p>Valor 01: R$ ${v1.toFixed(2)}</p>
+        <p>Percentual: ${v2}%</p>
+        <p>Valor do juros: R$ ${acrescimo.toFixed(2)}</p>
+        <p>Valor final: R$ ${total.toFixed(2)}</p>
     `;
 };
+
 
 function comissao(){
     let v1 = parseFloat(valor01.value);
@@ -82,10 +85,9 @@ function comissao(){
 
     resultado.innerHTML = `
     <h2>Comissão calculada</h2>
-    <ul>
-        <li>Comissão de ${v2} sobre uma venda de ${v1}</li>
-        <h2>Valor da comissão: ${comissao}</h2>
-    </ul>
+        <p>Valor da venda: R$ ${v1.toFixed(2)}</p>
+        <p>Percentual: ${v2}%</p>
+        <p>Valor da comissão: R$ ${comissao.toFixed(2)}</p>
     `;
 };
 
@@ -104,8 +106,9 @@ function lucro(){
 
     resultado.innerHTML = `
     <h2>Total lucro obtido</h2>
-        <p>LUCRO</p>
-        <p>Valor 01: ${v1} Valor 02: ${v2} Valor final: ${lucro}</p>
+        <p>Valor 01: R$ ${v1.toFixed(2)}</p>
+        <p>Valor 02: R$ ${v2.toFixed(2)}</p>
+        <p>Lucro final: R$ ${lucro.toFixed(2)}</p>
     `;
 };
 
