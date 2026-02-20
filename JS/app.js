@@ -69,7 +69,6 @@ function juros(){
     `;
 };
 
-
 function comissao(){
     let v1 = parseFloat(valor01.value);
     let v2 = parseFloat(valor02.value);
@@ -87,9 +86,11 @@ function comissao(){
     <h2>Comissão calculada</h2>
         <p>Valor da venda: R$ ${v1.toFixed(2)}</p>
         <p>Percentual: ${v2}%</p>
-        <p>Valor da comissão: R$ ${comissao.toFixed(2)}</p>
+    <h2>Valor da comissão: R$ ${comissao.toFixed(2)}</h2>
+
     `;
 };
+
 
 function lucro(){
     let v1 = parseFloat(valor01.value);
