@@ -1,11 +1,13 @@
 const valor01 = document.getElementById('valor01');
 const valor02 = document.getElementById('valor02');
-
 const resultado = document.getElementById('resultado');
 
 function calcularTotal (){
-    let valor01 = parseFloat(document.getElementById('valor01').value);
-    let valor02 = parseFloat(document.getElementById('valor02').value);
+
+    if (isNaN(valor01) || isNaN(valor02)) {
+        alert("Digite um número válido!");
+        return;
+    }
 
     document.getElementById('resultado').style.display = 'flex';
 
@@ -28,6 +30,12 @@ function desconto() {
     let valor01 = parseFloat(document.getElementById('valor01').value);
     let valor02 = parseFloat(document.getElementById('valor02').value);
 
+
+    if (isNaN(valor01) || isNaN(valor02)) {
+        alert("Digite um número válido!");
+        return;
+    }
+
     document.getElementById('resultado').style.display = 'flex';
 
     let desconto = (valor01 * valor02) / 100;
@@ -47,6 +55,12 @@ function desconto() {
 function juros(){
     let valor01 = parseFloat(document.getElementById('valor01').value);
     let valor02 = parseFloat(document.getElementById('valor02').value);
+
+
+    if (isNaN(valor01) || isNaN(valor02)) {
+        alert("Digite um número válido!");
+        return;
+    }
 
     document.getElementById('resultado').style.display = 'flex';
 
@@ -93,6 +107,12 @@ function juros(){
 function lucro(){
     let valor01 = parseFloat(document.getElementById('valor01').value);
     let valor02 = parseFloat(document.getElementById('valor02').value);
+
+    if (isNaN(valor01) || isNaN(valor02)) {
+        alert("Digite um número válido!");
+        return;
+    }
+
 
     document.getElementById('resultado').style.display = 'flex';
 
