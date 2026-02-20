@@ -6,7 +6,7 @@ function calcularTotal (){
     let v1 = parseFloat(valor01.value);
     let v2 = parseFloat(valor02.value);
 
-    if (isNaN(valor01) || isNaN(valor02)) {
+    if (isNaN(v1) || isNaN(v2)) {
         alert("Digite um número válido!");
         return;
     }
