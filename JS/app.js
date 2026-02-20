@@ -116,4 +116,16 @@ function lucro(){
 function limpar(){
     document.getElementById('resultado').style.display = 'none';
 
+    // limpas os valores digitados nos campos 
+    document.getElementById('valor01').value = '';
+    document.getElementById('valor02').value = '';
+
+    // foco ao input 1
+    valor01.focus();
+
+}
+
+// função pra exibir uma mensagem ao usuario caso o valor esteja inválido
+function mensagemUsuario(mensagem) {
+    mensagemResultado.textContent = mensagem;
 }
